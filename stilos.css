@@ -1,0 +1,8 @@
+@import "c:\Users\luisl\Programacion\estilos.css";
+    body {
+        background-image: url('car5.jpg'); /* Ruta a tu imagen */
+        background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
+        background-repeat: no-repeat; /* Evita que la imagen se repita */
+        background-attachment: fixed; /* Mantiene la imagen fija al hacer scroll */
+        color: white; /* Cambia el color del texto para que sea legible sobre el fondo */
+    }
