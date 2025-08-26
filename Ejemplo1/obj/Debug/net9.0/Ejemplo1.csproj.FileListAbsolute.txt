@@ -1,0 +1,15 @@
+C:\Users\luisl\Programacion\Ejemplo1\bin\Debug\net9.0\Ejemplo1.exe
+C:\Users\luisl\Programacion\Ejemplo1\bin\Debug\net9.0\Ejemplo1.deps.json
+C:\Users\luisl\Programacion\Ejemplo1\bin\Debug\net9.0\Ejemplo1.runtimeconfig.json
+C:\Users\luisl\Programacion\Ejemplo1\bin\Debug\net9.0\Ejemplo1.dll
+C:\Users\luisl\Programacion\Ejemplo1\bin\Debug\net9.0\Ejemplo1.pdb
+C:\Users\luisl\Programacion\Ejemplo1\obj\Debug\net9.0\Ejemplo1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\luisl\Programacion\Ejemplo1\obj\Debug\net9.0\Ejemplo1.AssemblyInfoInputs.cache
+C:\Users\luisl\Programacion\Ejemplo1\obj\Debug\net9.0\Ejemplo1.AssemblyInfo.cs
+C:\Users\luisl\Programacion\Ejemplo1\obj\Debug\net9.0\Ejemplo1.csproj.CoreCompileInputs.cache
+C:\Users\luisl\Programacion\Ejemplo1\obj\Debug\net9.0\Ejemplo1.sourcelink.json
+C:\Users\luisl\Programacion\Ejemplo1\obj\Debug\net9.0\Ejemplo1.dll
+C:\Users\luisl\Programacion\Ejemplo1\obj\Debug\net9.0\refint\Ejemplo1.dll
+C:\Users\luisl\Programacion\Ejemplo1\obj\Debug\net9.0\Ejemplo1.pdb
+C:\Users\luisl\Programacion\Ejemplo1\obj\Debug\net9.0\Ejemplo1.genruntimeconfig.cache
+C:\Users\luisl\Programacion\Ejemplo1\obj\Debug\net9.0\ref\Ejemplo1.dll
