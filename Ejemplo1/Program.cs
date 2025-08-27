@@ -19,6 +19,7 @@ materia.estudiante.edad = 20;
 materia.estudiante.carnet = 12234;
 materia.Nota = [new Notas() { nota = 2.4m, promedio = 2.5m }];
 materia.Nota = [new Notas() { nota = 5.0m, promedio = 2.7m }];
+materia.Mostrar();
 foreach (var item in materia.Nota)
 {
     Console.WriteLine(item.nota);
@@ -37,6 +38,10 @@ public class Materias : Facultades
     public DateTime fechaini;
     public Facultades? facultad;
     public List<Notas>? Nota;
+    public override void Mostrar()
+    {
+        Console.WriteLine("Soy una materia de la facultad.");
+    }
 
 }
 
@@ -47,6 +52,10 @@ public class Facultades
     public int numFac;
     public int CantPro;
     public Estudiantes? estudiante;
+    public virtual void Mostrar()
+    {
+        Console.WriteLine("Soy una facultad.");
+    }
 
 }
 
