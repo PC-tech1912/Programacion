@@ -1,76 +1,112 @@
 ﻿// See https://aka.ms/new-console-template for more information
+using System;
+
 Console.WriteLine("Hello, World!");
 
+// Crear una materia
 Materias materia = new Materias();
-materia.nomb = "Matematicas";
+materia.id = 1;
+materia.nomb = "Matemáticas";
 materia.semestre = 3;
 materia.precioM = 2000;
 materia.activa = true;
 materia.fechaini = new DateTime(2023, 1, 1);
-materia.facultad = new Facultades();
-materia.facultad.nombreSuper = "Juan";
-materia.facultad.numFac = 1;
-materia.facultad.CantPro = 100;
-materia.estudiante = new Estudiantes();
 
-materia.estudiante.nombre = "Luis";
-materia.estudiante.apellido = "Lopez";
-materia.estudiante.edad = 20;
-materia.estudiante.carnet = 12234;
-materia.Nota = [new Notas() { nota = 2.4m, promedio = 2.5m }];
-materia.Nota = [new Notas() { nota = 5.0m, promedio = 2.7m }];
-materia.Mostrar();
+// Facultad
+materia.facultad = new Facultades() { numFac = 1, nombreSuper = "Juan", CantPro = 100 };
+
+// Estudiante
+Estudiantes estudiante = new Estudiantes()
+{
+    carnet = 12234,
+    nombre = "Luis",
+    apellido = "Lopez",
+    edad = 20
+};
+materia.estudiante = estudiante;
+
+Profesores profesor = new Profesores()
+{
+    nombreP = "Juan",
+    apellidoP = "Perez",
+    activo= true, 
+ fechaini = new DateTime(2023, 1, 1)
+
+   
+};
+
+
+// Lista de notas
+materia.Nota = new List<Notas>();
+materia.Nota.Add(new Notas() { nota = 2.4m, promedio = 2.5m });
+materia.Nota.Add(new Notas() { nota = 5.0m, promedio = 2.7m });
+
+// Mostrar información
+Console.WriteLine($"Materia: {materia.nomb}, Facultad: {materia.facultad.nombreSuper}");
+Console.WriteLine($"Estudiante: {materia.estudiante.nombre} {materia.estudiante.apellido}");
 foreach (var item in materia.Nota)
 {
-    Console.WriteLine(item.nota);
-    Console.WriteLine(item.promedio);
+    Console.WriteLine($"Nota: {item.nota}, Promedio: {item.promedio}");
 }
 
 
+// ----------------- CLASES -------------------
 
-
-public class Materias : Facultades
+public class Materias
 {
+    public int id;
     public string? nomb;
     public int semestre;
     public decimal precioM;
     public bool activa;
     public DateTime fechaini;
     public Facultades? facultad;
+    public Estudiantes? estudiante;
     public List<Notas>? Nota;
-    public override void Mostrar()
-    {
-        Console.WriteLine("Soy una materia de la facultad.");
-    }
-
 }
 
 public class Facultades
 {
     public string? nombreSuper;
-    public string? nom;
     public int numFac;
     public int CantPro;
-    public Estudiantes? estudiante;
-    public virtual void Mostrar()
-    {
-        Console.WriteLine("Soy una facultad.");
-    }
-
 }
 
-public class Estudiantes : Facultades
+public class Estudiantes : IRegistro
 {
     public string? nombre;
     public string? apellido;
     public int carnet;
     public int edad;
-    public DateTime ingreso;
-    public Facultades? facultad;
 
+    public bool Matricular()
+    {
+        Console.WriteLine($"Estudiante {nombre} {apellido} matriculado correctamente.");
+        return true;
+    }
 }
-public class Notas : Estudiantes
+
+public class Notas
 {
     public decimal nota;
     public decimal promedio;
+}
+
+public class Profesores 
+{
+    public int carnetP;
+    public string? nombreP;
+    public string? apellidoP;
+    
+    
+    public bool activo;
+    public DateTime fechaini;
+    public Materias? Materia;
+    public Facultades? facultad;
+
+}
+// ----------------- INTERFAZ -------------------
+public interface IRegistro
+{
+    bool Matricular();
 }
